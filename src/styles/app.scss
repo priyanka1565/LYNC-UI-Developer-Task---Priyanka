@@ -1,0 +1,1561 @@
+@import "mixin";
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-wrap: normal;
+}
+body {
+  overflow-x: hidden;
+  background-color: #020617;
+}
+
+// ********************************
+// homepage scss start from here
+
+// ********************************
+
+.homePage_Div {
+  width: 100vw;
+  height: 100vh;
+  background-color: #020617;
+}
+
+// ********************************
+// section1 scss start from here
+
+// ********************************
+
+.Section1Div {
+  @include basic_flex_properties(row, center);
+  position: relative;
+
+  .section1_bg_design {
+    position: absolute;
+    left: -1rem;
+    top: 0rem;
+    z-index: 0;
+    width: 100%;
+  }
+}
+
+// ********************************
+// navbar scss start from here
+
+// ********************************
+
+.navbar_ext {
+  width: 100%;
+  // position: relative;
+  @include basic_flex_properties(row, center);
+  position: fixed;
+  // top: rem;
+  z-index: 999;
+}
+
+// hidden dropdown menu code
+
+.dropdown {
+  position: relative;
+  display: none;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+
+  border: none;
+  cursor: pointer;
+}
+
+.three_bars {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 3rem;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 9rem;
+  left: 3rem;
+  width: 80vw;
+  background-color: rgb(4, 1, 18);
+  min-width: 160px;
+  z-index: 999;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  width: 100%;
+  text-align: center;
+  padding: 1.4rem 2.8rem 1.4rem 2.8rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  transition: background-color 1s ease;
+  display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar_outer_div {
+  @include basic_flex_properties(row, space-between);
+  position: absolute;
+  top: 6rem;
+  width: 80%;
+  height: 8rem;
+ background: #020617;
+transition: background-color 0.3s ease;
+  backdrop-filter: blur(10rem);
+  border: white solid 1px;
+  border-radius: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 999;
+
+  .group_left {
+    @include basic_flex_properties(row, space-between);
+    width: 80%;
+
+    .navbar_company_logo {
+      width: 3.708rem;
+      height: 2.3rem;
+      margin-left: 1.5rem;
+    }
+
+    .group2_middle {
+      @include basic_flex_properties(row, center);
+      width: 80%;
+
+      a {
+        padding: 1.4rem 2.8rem 1.4rem 2.8rem;
+        padding: 1rem, 2rem, 1rem, 2rem;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: sans-serif;
+        transition: background-color 1s ease;
+      }
+
+      a:hover {
+        color: rgb(156, 67, 67);
+      }
+    }
+  }
+}
+.navbar_bttn {
+  @include bttn_property(white, white, right, black);
+}
+
+// ********************************
+// section2 scss start from here
+
+// ********************************
+
+.section2_main_outer_div {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  color: white;
+  z-index: 10;
+
+  .section2_main_text {
+    position: absolute;
+    top: 29.8rem;
+
+    color: white;
+    z-index: 3;
+    font-size: 8rem;
+    font-weight: 900;
+
+    div {
+      @include basic_flex_properties(row, center);
+
+      p {
+        font: 8rem;
+        font-weight: 900;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        @include gradient(rgba(255, 2, 118, 1), rgba(114, 9, 183, 1), right);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+    }
+  }
+
+  .main_text2 {
+    @include basic_flex_properties(column, center);
+    color: rgba(218, 221, 216, 1);
+    position: absolute;
+    top: 52.8rem;
+
+    div {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+  }
+
+  .bttn_row {
+    @include basic_flex_properties(row, center);
+    position: absolute;
+    top: 61rem;
+
+    .section2_bttn1 {
+      @include bttn_property(
+        rgba(63, 55, 201, 1),
+        rgba(76, 201, 240, 1),
+        bottom,
+        white
+      );
+    }
+
+    .section2_bttn2 {
+      @include bttn_property(black, black, bottom, white);
+    }
+  }
+}
+
+.section2_bg_img {
+  width: 151.045rem;
+  height: 64.484rem;
+  position: relative;
+  top: 13.5rem;
+}
+
+// ********************************
+// section3 scss start from here
+
+// ********************************
+
+.section3_outer_div {
+  @include basic_flex_properties(column, center);
+  height: 30rem;
+  background-color: #020617;
+  position: relative;
+  width: 100%;
+  z-index: 20;
+  margin-top: 8rem;
+
+  div {
+    border-radius: 3.2rem;
+    @include gradient(
+      rgba(217, 217, 217, 0.07),
+      rgba(217, 217, 217, 0.05),
+      right
+    );
+    border: rgba(217, 217, 217, 0.07) solid 1px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.backed_by {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.backed_by_companies {
+  width: 100%;
+}
+
+// ********************************
+// section4 scss start from here
+
+// ********************************
+
+.section4_outer_div {
+  @include basic_flex_properties(column, center);
+  z-index: 6;
+  position: relative;
+  background-color: #020617;
+
+  hr {
+    border: none;
+    width: 70%;
+    height: 0.3rem;
+    background: linear-gradient(to right, black, white, black);
+    padding: none;
+    margin: none;
+  }
+
+  .section4_main_text {
+    @include basic_flex_properties(column, center);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .text_part1 {
+      @include text_properties(2.4rem, 700, white);
+    }
+
+    .text_part2_outer {
+      @include basic_flex_properties(row, center);
+      @include text_properties(2.4rem, 700, white);
+
+      p {
+        color: rgb(47, 56, 150);
+        margin-left: 0.8rem;
+      }
+    }
+
+    .text_part3 {
+      @include text_properties(2.4rem, 700, white);
+    }
+  }
+
+  .background_img_section4 {
+    position: absolute;
+    height: 80rem;
+    width: 79.3rem;
+    top: 8.9rem;
+  }
+}
+
+.s4_flex_of_images{
+  @include basic_flex_properties(row, center);
+}
+
+
+.s4_company_img{
+  width: 15rem;
+  margin: 3rem;
+
+}
+
+.s4_company_img1{
+  width: 20rem;
+  margin: 3rem;
+}
+
+
+.section4_part2_outer_div {
+  @include basic_flex_properties(column, center);
+  padding-top: 15rem;
+
+  .s4p_heading1 {
+    @include text_properties(4.8rem, 800, white);
+  }
+
+  .s4p_heading2 {
+    @include basic_flex_properties(row, center);
+  }
+
+  .everyone {
+    @include text_properties(4.8rem, 800, white);
+    background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    padding-left: 1rem;
+  }
+
+  .companies_img {
+    position: absolute;
+    width: 80%;
+    top: 60rem;
+  }
+}
+
+// ********************************
+// section5 scss start from here
+
+// ********************************
+
+.section5_outer {
+  @include basic_flex_properties(column, center);
+  z-index: 10;
+  position: relative;
+  top: 18rem;
+  background-color: #020617;
+  width: 100%;
+
+  .background_img_section5 {
+    position: absolute;
+    height: 80rem;
+    width: 79.3rem;
+    top: -13.6rem;
+  }
+
+  .section5_text_content {
+    @include basic_flex_properties(column, center);
+    position: absolute;
+    top: 1rem;
+  }
+
+  .text_1 {
+    color: white;
+    font-size: 4.8rem;
+    font-weight: 900;
+    font-family: sans-serif;
+  }
+
+  .text_flex {
+    @include basic_flex_properties(row, center);
+
+    p {
+      @include text_properties(3.8rem, 900, rgb(110, 4, 120));
+      padding-left: 2rem;
+    }
+  }
+
+  .small_text_flex {
+    @include basic_flex_properties(column, center);
+
+    div {
+      @include text_properties(2.4rem, 700, white);
+    }
+  }
+
+  .etherium_and_text_div {
+    @include basic_flex_properties(row, flex-start);
+    position: relative;
+    top: 34rem;
+    background-color: rgb(26, 15, 50);
+    border-radius: 3rem;
+    margin: 3rem;
+    width: 85%;
+    // padding: 1rem;
+
+    .text_outer_divv {
+      @include basic_flex_properties(column, flex-start);
+      padding: 2rem;
+      width: 100%;
+
+      .div_heading {
+        @include basic_flex_properties(row, flex-start);
+        padding: 0.75rem;
+
+        div {
+          @include text_properties(3.2rem, 700, white);
+        }
+
+        .web3{
+          @include text_properties(rem, 700, rgb(110, 4, 120));
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          @include text_properties(2.4rem, 500, white);
+          padding: 0.75rem;
+
+          .pointer_star {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+      }
+    }
+
+    @keyframes eth_anim {
+      0%,
+      100% {
+        transform: translateY(9.8rem)}
+
+      50%,
+      60%,
+      70% {
+        transform: translateY(-4rem);
+      }
+    }
+
+    .etherium_img {
+      height: 35rem;
+      padding: 2rem;
+      animation: eth_anim 4s infinite;
+    }
+  }
+}
+
+.section5_flex_outer {
+  @include basic_flex_properties(row, center);
+  position: relative;
+  flex: 1;
+  top: 40rem;
+  color: white;
+  // width: 80%;
+
+  .flex_part1 {
+    @include basic_flex_properties(row, space-between);
+    background-image: linear-gradient(
+      24deg,
+      rgba(67, 5, 89, 0.544),
+      rgba(2,6,23)
+    );
+    // width: 100%;
+
+    padding: 4rem;
+    border-radius: 3.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.178);
+
+    .flexPart_1text_and_bttn {
+      @include basic_flex_properties(column, space-between);
+      padding-right: 4rem;
+      margin-bottom: 3rem;
+
+
+      .text1 {
+        @include text_properties(2.4rem, 700, white);
+      }
+
+      .text2 {
+        text-align: start;
+        @include text_properties(1.5rem, 700, rgb(117, 117, 117, 1));
+      }
+
+      .bttn_outer_div {
+        @include basic_flex_properties(row, flex-start);
+        width: 100%;
+
+        .view_docs_bttn {
+          @include bttn_property(white, white, right, black);
+          padding: none;
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    .controller_img {
+      width: 18rem;
+    }
+  }
+
+  .flex_part2_outer {
+    @include basic_flex_properties(row, center);
+    column-gap: 1rem;
+  }
+
+  .flex_part2 {
+    @include basic_flex_properties(column, center);
+    row-gap: 1rem;
+    margin-left: 1.5rem;
+  }
+}
+.sub_div {
+  @include basic_flex_properties(column, flex-start);
+  padding: 2rem;
+  background: linear-gradient(
+    92.98deg,
+    rgba(217, 217, 217, 0.07) 32.09%,
+    rgba(217, 217, 217, 0.05) 116.98%
+  );
+  border-radius: 3.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.083);
+
+  .numbers_1 {
+    width: 100%;
+    @include text_properties(3.8rem, 900, white);
+    background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+  .numbers_2 {
+    width: 100%;
+    @include text_properties(3.8rem, 900, white);
+    background: linear-gradient(94.68deg, #ff0276 2.51%, #7209b7 56.42%);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  .sub_div_text {
+    width: 100%;
+    @include basic_flex_properties(row, flex-start);
+    font-size: 1.2rem;
+  }
+}
+
+.numbers_3 {
+  width: 100%;
+  @include text_properties(3.8rem, 900, white);
+  background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.crypto_img_outer_div{
+  width: 100%;
+  @include basic_flex_properties(row, flex-end);
+
+  .crypto_wallet_img {
+    height: 17rem;
+    transform: rotateZ(360deg) translateY(1rem);
+  }
+}
+
+
+// ********************************
+// section6 scss start from here
+
+// ********************************
+
+.section6_outer_div {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  top: 120rem;
+  width: 100%;
+
+  .section6_heading {
+    @include basic_flex_properties(row, center);
+    position: relative;
+    top: 10rem;
+
+    ._6product {
+      @include text_properties(4.8rem, 900, white);
+    }
+
+    ._6suite {
+      @include text_properties(4.8rem, 900, white);
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+  }
+
+  .templates_flex {
+    @include basic_flex_properties(row, center);
+    position: absolute;
+    flex-wrap: wrap;
+    width: 80%;
+    top: 30rem;
+  }
+  
+  .back_purple_imgs6{
+    position:absolute;
+    top: 10rem;
+  }
+}
+
+.card_outer {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  width: 30%;
+  height: 37rem;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0) 16.98%,
+    rgba(2, 6, 23, 0.8) 66.5%
+  );
+  margin: 1rem;
+  // border: solid white 1px;
+
+  .temp_img {
+    width: 26rem;
+    height: 18.3rem;
+  }
+  .card_body {
+    width: 100%;
+    // margin-left: 3rem;
+    padding: 2rem;
+  }
+
+  .card_title {
+    @include text_properties(2.4rem, 700, white);
+  }
+}
+.cardd_data {
+  color: rgba(117, 117, 117, 1);
+  @include text_properties(1.4rem, 400, rgba(117, 117, 117, 1));
+}
+
+// ********************************
+// section7 scss start from here
+
+// ********************************
+
+.section7_outer {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  top: 70rem;
+
+  .section7_text_flex {
+    @include basic_flex_properties(column, center);
+    padding-bottom: 5rem;
+
+    div {
+      @include text_properties(4.8rem, 900, white);
+    }
+    p {
+      @include text_properties(4.8rem, 900, white);
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+  }
+
+  .chain_logo_img {
+    width: 70%;
+    padding-bottom: 15rem;
+  }
+}
+
+// ********************************
+// section8 scss start from here
+
+// ********************************
+
+.section8_div_outer {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  top: 190rem;
+  width: 100%;
+  .section8_heading {
+    @include basic_flex_properties(row, center);
+
+    div {
+      @include text_properties(4.8rem, 900, white);
+    }
+
+    .blog {
+      @include text_properties(4.8rem, 900, white);
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding-left: 1.5rem;
+    }
+
+    .section8_sub_heading {
+      @include basic_flex_properties(column, center);
+    }
+  }
+}
+.t1 {
+  @include text_properties(2.4rem, 600, white);
+}
+h2 {
+  color: white;
+}
+
+.section8_temp_background {
+  position: absolute;
+  top: -10rem;
+}
+
+// carousel
+
+.section8_slider {
+  width: 60%;
+  margin: 5rem;
+}
+.blogs_img{
+  width: 100%;
+}
+
+
+.card_text_flex_outer {
+  @include basic_flex_properties(column, flex-start);
+  width: 100%;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  background-color: rgba(19,14,40);
+
+  .title_b {
+    @include text_properties(1.6rem, 700, white);
+    padding: 1rem;
+  }
+  .small_content {
+    @include text_properties(1.4rem, 700, grey);
+    padding: 1rem;
+  }
+
+  .read_more_bttn_outer_div {
+    @include basic_flex_properties(row, flex-start);
+    width: 100%;
+    padding-left: 1rem;
+    margin: 2rem;
+
+    button {
+      font-size: 1.5rem;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 1.5rem;
+      font-family: sans-serif;
+      font-weight: 500;
+      padding: 0.7rem;
+    }
+  }
+}
+
+// ********************************
+// section9 scss start from here
+
+// ********************************
+
+.section9_outer {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  top: 210rem;
+  width: 100%;
+
+  .section9_heading {
+    @include basic_flex_properties(row, center);
+
+    div {
+      @include text_properties(4.8rem, 900, white);
+    }
+
+    .Reviews {
+      @include text_properties(4.8rem, 900, white);
+      background: linear-gradient(94.68deg, #ff0276 2.51%, #7209b7 56.42%);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding-left: 1.5rem;
+    }
+  }
+
+  .reviews_div {
+    margin-bottom: 40rem;
+  }
+}
+
+.section9_temp_background {
+  position: absolute;
+  top: -42rem;
+  opacity: 0.8;
+}
+// carousel for section9
+
+.section9_slider {
+  width: 70%;
+  margin: 5rem;
+  position: absolute;
+  top: 10rem;
+
+  .s9_card_outer_div {
+    @include basic_flex_properties(column, center);
+    width: 100%;
+    background-color: grey;
+
+    .review {
+      @include basic_flex_properties(row, center);
+      @include text_properties(1.6rem, 500, white);
+      padding: 3.5rem;
+      background-color: rgb(4, 4, 21);
+    }
+
+    .reviewing_person_outer_div {
+      @include basic_flex_properties(row, flex-start);
+      width: 100%;
+      background-color: rgb(23, 15, 46);
+
+      padding: 2rem;
+
+      .photo_div {
+        background-color: grey;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+      }
+
+      .personn {
+        @include text_properties(1.4rem, 700, white);
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}
+
+// ********************************
+// section10 scss start from here
+
+// ********************************
+
+.section10_outer_div {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  top: 230rem;
+
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  
+
+  .members_ring {
+    position: absolute;
+    width: 70%;
+    animation: rotateAnimation 60s linear infinite;
+  }
+  
+
+  .center_div {
+    @include basic_flex_properties(column, center);
+    position: absolute;
+    top: 40rem;
+
+    .strongest {
+      @include text_properties(4.8rem, 900, white);
+      z-index: 15;
+    }
+
+    .community {
+      @include text_properties(4.8rem, 900, white);
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    .telegram_logo_bttn {
+      @include bttn_property(#3f37c9, #4cc9f0, bottom, white);
+    }
+  }
+}
+
+// ********************************
+// section11 scss start from here
+
+// ********************************
+
+.section11_outer {
+  @include basic_flex_properties(column, center);
+  position: relative;
+  top: 230rem;
+
+  .SEC111_BG {
+    position: absolute;
+    top: -47rem;
+  }
+
+  .section11_heading {
+    @include basic_flex_properties(row, center);
+
+    .our {
+      @include text_properties(4.8rem, 900, white);
+    }
+
+    .partners {
+      @include text_properties(4.8rem, 900, white);
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding-left: 1.5rem;
+    }
+  }
+
+  .partners_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem;
+    padding-top: 5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  
+
+  }
+
+  .individual_partner_div {
+    @include basic_flex_properties(row, center);
+    background: linear-gradient(
+      92.98deg,
+      rgba(217, 217, 217, 0.07) 32.09%,
+      rgba(217, 217, 217, 0.05) 116.98%
+    );
+    padding: 1rem;
+    border-radius: 2.4rem;
+
+    border: 0.75px solid rgba(35, 7, 7, 0.999);
+
+    .partner_img{
+      width: 20rem;
+    }
+  }
+}
+
+// ********************************
+// footer scss start from here
+
+// ********************************
+
+.footer_main_outer_div {
+  @include basic_flex_properties(column, center);
+  width: 100%;
+  position: relative;
+  top: 250rem;
+  padding-top: 22rem;
+
+  .LYNC_back {
+    position: absolute;
+    width: 60%;
+  }
+
+  .foter_upper_text_flex {
+    @include basic_flex_properties(column, center);
+    position: absolute;
+    top: 23.3rem;
+
+    div {
+      @include text_properties(4.8rem, 900, white);
+    }
+
+    .bttn_outer_div {
+      @include basic_flex_properties(row, center);
+
+      button {
+        @include bttn_property(white, white, right, white);
+        background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      }
+    }
+  }
+}
+
+.footer_lower_part_outer_div {
+  @include basic_flex_properties(column, space-between);
+  position: absolute;
+  top: 60rem;
+  width: 90%;
+
+  .first{
+    @include basic_flex_properties(row , center);
+  }
+
+  .left_part {
+    @include basic_flex_properties(column, center);
+    margin: 3rem;
+
+    .logo_last {
+      width: 30rem;
+    }
+
+    div {
+      @include text_properties(1.8rem, 400, white);
+      margin-top: 1rem;
+    }
+
+    .icons_row {
+      @include basic_flex_properties(row, space-evenly);
+      width: 80%;
+
+      .icons_div {
+        border-radius: 50%;
+        padding: 1.5rem;
+        margin: 0.3rem;
+        background-color: rgba(128, 128, 128, 0.259);
+      }
+    }
+  }
+}
+
+.middle_outer_div {
+  @include basic_flex_properties(col, center);
+  margin: 3rem;
+
+  .MID_R_1 {
+    @include basic_flex_properties(column, flex-start);
+    margin-left: 3rem;
+
+    div {
+      @include text_properties(2.4rem, 600, white);
+      margin-bottom: 1rem;
+    }
+    p {
+      @include text_properties(1.6rem, 200, grey);
+    }
+  }
+}
+
+.end_part {
+  @include basic_flex_properties(column, flex-start);
+  width: 40%;
+
+  div {
+    width: 100%;
+    @include text_properties(3.2rem, 700, white);
+  }
+
+  p {
+    width: 100%;
+    @include text_properties(2rem, 400, grey);
+    padding-bottom: 2rem;
+  }
+}
+
+.input-container {
+  display: flex;
+  border: none;
+  height: 6rem;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(
+    92.98deg,
+    rgba(217, 217, 217, 0.07) 32.09%,
+    rgba(217, 217, 217, 0.05) 116.98%
+  );
+}
+
+.input-field {
+  flex: 1;
+  padding: 2rem;
+  border: none;
+  outline: none;
+  width: 30%;
+  background-color: transparent;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.submit-button {
+  @include bttn_property(white, white, right, white);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+}
+
+
+
+// media query starts from here/ responsiveness 
+
+@media (max-width: 1150px) {
+  html {
+    font-size: 59%;
+  }
+  
+}
+
+@media (max-width: 1120px) {
+
+  html {
+    font-size: 57%;
+  }
+
+  .section5_flex_outer{
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .section5_flex_outer .flex_part1{
+    width: 100%;
+  }
+
+  .section5_flex_outer .flex_part1 .controller_img {
+    width: 21rem;
+  }
+
+  .section5_flex_outer .flex_part2_outer{
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .sub_div{
+    width: 42vw;
+  }
+  .crypto_img_outer_div .crypto_wallet_img{
+    height: 21rem;
+  }
+
+  .sub_div .sub_div_text{
+    font-size: 1.6rem;
+  }
+  .sub_div .numbers_1{
+    font-size: 4.2rem;
+  }
+
+  .sub_div .numbers_2{
+    font-size: 4.2rem;
+  }
+
+  .sub_div .numbers_3{
+    font-size: 4.2rem;
+  }
+
+  .section10_outer_div .center_div {
+    top: 44rem;
+  }
+}
+
+@media (max-width: 1060px) {
+  html {
+    font-size: 56%;
+  }
+}
+
+
+
+@media (max-width: 1025px){
+
+  .etherium_img{
+    display: none;
+  }
+
+}
+
+
+
+@media (max-width: 950px) {
+
+  html {
+    font-size: 54%;
+  }
+
+
+  .section10_outer_div .center_div .strongest {
+    font-size: 4.4rem;
+  }
+  .section10_outer_div .center_div {
+    top: 48rem;
+  }
+  .dropdown {
+    display: flex;
+  }
+
+  .navbar_outer_div .group_left .group2_middle {
+    display: none;
+  }
+
+  .navbar_outer_div .group_left {
+    width: 0%;
+  }
+
+  .section8_slider{
+    width: 80%;
+  }
+}
+
+@media (max-width: 920px) {
+  html {
+    font-size: 52%;
+  }
+
+  .section10_outer_div .center_div {
+    top: 50rem;
+  }
+
+  .section10_outer_div{
+    top: 210rem;
+  }
+
+  .section11_outer{
+    top: 200rem;
+  }
+
+  .footer_main_outer_div{
+    top: 220rem;
+  }
+
+
+}
+
+@media (max-width: 865px) {
+  html {
+    font-size: 50%;
+  }
+
+  .s4_flex_of_images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding-top: 5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    
+  }
+
+  .s4_company_img{
+    width: 20rem;
+    transform: rotateZ(16deg);
+  }
+
+  .section10_outer_div .center_div {
+    top: 53rem;
+  }
+
+  .section10_outer_div{
+    top: 220rem;
+  }
+
+  .section11_outer .partners_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 790px) {
+  html {
+    font-size: 48%;
+  }
+
+  .section10_outer_div .center_div {
+    top: 57rem;
+  }
+  
+
+  .section11_outer {
+    top: 221rem;
+    grid-gap: 3rem;
+  }
+
+ 
+
+  .section7_outer {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    font-size: 46%;
+  }
+
+
+  .section10_outer_div .center_div {
+    top: 60rem;
+
+  }
+
+  .section10_outer_div{
+    top: 200rem;
+  }
+
+  .section11_outer {
+    top: 170rem;
+  }
+
+  .section11_outer .partners_grid{
+    padding-top: 10rem;
+
+  }
+
+  .footer_main_outer_div {
+    top: 210rem;
+  }
+
+}
+
+@media (max-width: 725px) {
+  html {
+    font-size: 44%;
+  }
+  .templates_flex{
+    width: 80%;;
+  }
+
+  .section8_div_outer{
+    top: 80rem;
+  }
+
+  .section9_outer{
+    top: 100rem;
+  }
+
+  .section6_outer_div{
+    display: none;
+  }
+
+  .section8_slider{
+    width: 90%;
+  }
+
+  .section9_slider{
+    width: 90%;
+  }
+
+  .section10_outer_div .center_div {
+    top: 63rem;
+
+  }
+  .section10_outer_div{
+    top: 90rem;
+  }
+
+  .section11_outer{
+    top: 68rem;
+  }
+  .footer_main_outer_div{
+    top: 90rem;
+  }
+
+}
+
+@media (max-width: 685px) {
+  html {
+    font-size: 42%;
+  }
+  .navbar_outer_div .group_left .group2_middle a {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .section10_outer_div .center_div {
+    top: 66rem;
+
+  }
+
+}
+
+@media (max-width: 655px) {
+  html {
+    font-size: 40%;
+  }
+
+  .section10_outer_div .center_div {
+    top: 70rem;
+
+  }
+
+  .section8_div_outer{
+    display: none;
+  }
+}
+
+@media (max-width: 615px) {
+  html {
+    font-size: 38%;
+  }
+
+  .section10_outer_div .center_div {
+    top: 76rem;
+
+  }
+  .navbar_outer_div .group_left .group2_middle a {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .templates_flex{
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 36%;
+  }
+  .section10_outer_div .center_div {
+    top: 80rem;
+
+  }
+
+
+}
+
+@media (max-width: 545px) {
+  html {
+    font-size: 34%;
+  }
+
+  .section11_outer{
+    top: 25rem;
+  }
+
+
+  .section10_outer_div .center_div {
+    top: 85rem;
+
+  }
+  .section10_outer_div{
+    top: 60rem;
+  }
+
+  .footer_main_outer_div {
+    top: 40rem;
+  }
+}
+
+@media (max-width: 490px) {
+  html {
+    font-size: 32%;
+  }
+
+  .section8_div_outer{
+    display: none;
+  }
+
+  .section10_outer_div .center_div {
+    top: 92rem;
+
+  }
+  .footer_main_outer_div{
+    top: -20rem;
+  }
+
+  .section11_outer{
+    top: -40rem;
+  }
+
+  .section10_outer_div{
+    top: 10rem;
+  }
+
+  .section9_outer{
+    display: none;
+  }
+
+
+
+}
+
+@media (max-width: 470px) {
+  html {
+    font-size: 30%;
+  }
+
+  .section11_outer{
+    top: -45rem;
+  }
+
+  .footer_main_outer_div{
+    top: -35rem;
+  }
+
+  .section10_outer_div .center_div {
+    top: 98rem;
+
+  }
+
+}
+
+
+@media (max-width: 430px) {
+
+  html {
+    font-size: 25%;
+  }
+
+  
+  .section10_outer_div .center_div {
+    top: 120rem;
+
+  }
+
+
+}
