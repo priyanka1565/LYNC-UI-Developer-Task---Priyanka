@@ -122,7 +122,12 @@ body {
   top: 6rem;
   width: 80%;
   height: 8rem;
- background: #020617;
+ background: linear-gradient(
+    to top,
+    #020617,
+    rgba(63, 55, 201, 0.5),
+    #020617
+  );
 transition: background-color 0.3s ease;
   backdrop-filter: blur(10rem);
   border: white solid 1px;
